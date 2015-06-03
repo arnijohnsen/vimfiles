@@ -30,6 +30,7 @@ set list
 
 " Use r filetype for .R files
 au BufNewFile,BufRead *.R setlocal ft=r
+autocmd FileType r set commentstring=#\ %s
 
 " Tabs
 set expandtab
