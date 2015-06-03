@@ -21,9 +21,14 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set list
 
 " Foldcolumn and save folds
-set foldcolumn=1
+"set foldcolumn=1
 "autocmd BufWinLeave *.* mkview
 "autocmd BufWinEnter *.* silent loadview
+
+"Highlight lines longer than 80 chars
+2mat ErrorMsg '\%81v.'
+
+" Use r filetype for .R files
 au BufNewFile,BufRead *.R setlocal ft=r
 
 " Tabs
