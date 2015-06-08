@@ -43,3 +43,6 @@ nnoremap <silent> <Right> <c-w>l
 nnoremap <silent> <Left> <c-w>h
 nnoremap <silent> <Up> <c-w>k
 nnoremap <silent> <Down> <c-w>j
+
+" Shortcut to remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
