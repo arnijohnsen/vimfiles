@@ -44,5 +44,12 @@ nnoremap <silent> <Left> <c-w>h
 nnoremap <silent> <Up> <c-w>k
 nnoremap <silent> <Down> <c-w>j
 
-" Shortcut to remove trailing whitespace
+" Shortcut to remove trailing whitespace or add hyphens
+function! FillLine( str )
+      let reps = (80 - col("$")) / len(a:str)
+      if reps > 0
+        .s/$/\=(' '.repeat(a:str, reps))/
+      endif
+endfunction
+nnoremap <Leader>rfl :call FillLine('-')<CR>
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
