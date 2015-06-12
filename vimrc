@@ -19,6 +19,7 @@ set nobackup            " get rid of anoying ~file
 set scrolloff=4
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set list
+set foldmethod=indent
 
 " Foldcolumn and save folds
 "set foldcolumn=1
