@@ -39,6 +39,9 @@ set shiftwidth=4
 set softtabstop=4
 au FileType r setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+" Enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup = 1
+
 " Navigation shortcuts
 nnoremap <silent> <Right> <c-w>l
 nnoremap <silent> <Left> <c-w>h
