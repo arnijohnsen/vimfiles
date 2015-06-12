@@ -34,9 +34,10 @@ autocmd FileType r set commentstring=#\ %s
 
 " Tabs
 set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+au FileType r setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Navigation shortcuts
 nnoremap <silent> <Right> <c-w>l
@@ -46,10 +47,10 @@ nnoremap <silent> <Down> <c-w>j
 
 " Shortcut to remove trailing whitespace or add hyphens
 function! FillLine( str )
-      let reps = (80 - col("$")) / len(a:str)
-      if reps > 0
+    let reps = (80 - col("$")) / len(a:str)
+    if reps > 0
         .s/$/\=(' '.repeat(a:str, reps))/
-      endif
+    endif
 endfunction
 nnoremap <Leader>rfl :call FillLine('-')<CR>
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
