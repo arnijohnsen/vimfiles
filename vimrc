@@ -42,6 +42,9 @@ au FileType r setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " Enable indent guides on startup
 let g:indent_guides_enable_on_vim_startup = 1
 
+" Enable vim-hardtime
+let g:hardtime_default_on = 1
+
 " Navigation shortcuts
 nnoremap <silent> <Right> <c-w>l
 nnoremap <silent> <Left> <c-w>h
